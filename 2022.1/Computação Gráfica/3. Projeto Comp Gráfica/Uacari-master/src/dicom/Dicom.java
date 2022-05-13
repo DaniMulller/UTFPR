@@ -1,8 +1,5 @@
 package dicom;
 
-
-
-
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
@@ -61,7 +58,7 @@ public class Dicom {
 	public Dicom(String dicomFilePath, String outputXmlPath){
 		init(dicomFilePath, outputXmlPath);
 	}
-	
+
 	private void init(String dicomFilePath, String outputXmlPath){
 		String args[] = new String[3];
 		args[0] = dicomFilePath;
@@ -72,7 +69,7 @@ public class Dicom {
 		args[2] = outputXmlPath;
 		Dcm2Xml.main(args);
 		newdir = null;
-		
+
 		//then instantiates DicomXML
 		this.xmlPath = outputXmlPath;
 	}
