@@ -12,7 +12,7 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import morphology.Morphology;
+import morphology.*;
 
 
 import static image.Image.InterpolationType.*;
@@ -400,9 +400,7 @@ public class ImageOperation {
 		
 		return associatedImg;
 	}
-	
-	
-	
+
 	public Image dilateOrErode(Image structElement, boolean dilation){
 		Image aux = new Image(associatedImg);
 		
@@ -420,7 +418,4 @@ public class ImageOperation {
 		aux = null;
 		return associatedImg;
 	}
-	
-	
-	
 }

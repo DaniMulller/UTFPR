@@ -1,11 +1,10 @@
 package morphology;
 
-import image.Image;
-import image.ImageOperation;
+import image.*;
 
 /**
  * General class for morphology, including dilations, erosions, reconstructions, etc.
- * @author Érick Oliveira Rodrigues (erickr@id.uff.br)
+ * @author ï¿½rick Oliveira Rodrigues (erickr@id.uff.br)
  */
 public class Morphology implements MorphologyConstants{
 	
@@ -84,23 +83,23 @@ public class Morphology implements MorphologyConstants{
 		final int tX = (int) (Math.ceil(structElement.getHeight()/2f) - 1),
 				tY = (int) (Math.ceil(structElement.getWidth()/2f) - 1);
 		
-		//esse for itera os valores i e j de acordo com a posição do structElement(structuring element) em cima da imagem source
+		//esse for itera os valores i e j de acordo com a posiï¿½ï¿½o do structElement(structuring element) em cima da imagem source
 		for (int i=(int)-tY + y; i<= tY + y; i++){
 			for (int j=(int) -tX + x; j<= tX + x; j++){
-				//se as variáveis i e j não estiverem extrapolando os limites da imagem src e não forem igual às coordenadas do pixel central do structuring element
+				//se as variï¿½veis i e j nï¿½o estiverem extrapolando os limites da imagem src e nï¿½o forem igual ï¿½s coordenadas do pixel central do structuring element
 				if (j >= 0 && i >=0 && j < src.getWidth() && i < src.getHeight() /*&& !(i == y && j == i)*/){
-					double sub = 0; //subtração
+					double sub = 0; //subtraï¿½ï¿½o
 					int structBand = (structElement.getNumBands() > band ? band : structElement.getNumBands() - 1);
 					double structValue = structElement.getPixel(j-x+tX, i-y+tY, structBand);
 					if (structValue == 255) structValue = max;
-					if (!dilate) sub = src.getPixel(j, i, band) - structValue; //se for pra erosão
+					if (!dilate) sub = src.getPixel(j, i, band) - structValue; //se for pra erosï¿½o
 					else sub = (max-structValue) - src.getPixel(j, i, band); //se for pra dilatar
 					if (sub < min)
 						min = sub;
 				}
 			}
 		}
-		double result = min+max; //para imagens binárias 'min' pode ser -255 ou 0
+		double result = min+max; //para imagens binï¿½rias 'min' pode ser -255 ou 0
 		if (dilate) result = max-result; //inverter a imagem se for pra dilatar
 
 		//System.out.println(result);
