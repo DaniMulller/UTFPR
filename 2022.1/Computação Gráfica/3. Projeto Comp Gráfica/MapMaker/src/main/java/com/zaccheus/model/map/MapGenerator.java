@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class MapGenerator {
 
-    private static final int DEFAULT_WIDTH = 700;
-    private static final int DEFAULT_HEIGHT = 700;
+    private static final int DEFAULT_WIDTH = 1024;
+    private static final int DEFAULT_HEIGHT = 1024;
     private static final double DEFAULT_LACUNARITY = 2.9;
     private static final double DEFAULT_PERSISTENCE = 0.4;
     private static final int DEFAULT_OCTAVES = 4;

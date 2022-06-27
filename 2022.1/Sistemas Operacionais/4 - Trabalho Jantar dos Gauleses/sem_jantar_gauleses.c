@@ -34,6 +34,9 @@ dígitos de seu RA
 
 A solução não deve ter nenhum comentário.
 */
+
+//gcc sem_jantar_gauleses.c -o sem_jantar_gauleses -lpthread -lrt 
+
 #include <stdio.h>
 #include <string.h>
 #include <pthread.h>
@@ -43,87 +46,72 @@ A solução não deve ter nenhum comentário.
 
 #define JAVALIS 20
 #define N_COZINHEIROS 1
+#define TIME 1
 
-sem_t mutex, full, empty;
+sem_t mutex, java, coz;
 
-int counter=0;
-char Nome[] = {'d','a','n','i','e','l'};
+int javalis=JAVALIS, qtd=0;
+char Nome[6] = "DANIEL";
 
 int ColocaJavalis(){
-    if(counter < JAVALIS){
-        counter++;
-        return 1;
-    }
-    else{
-        return 0;
-    }
+    sem_wait(&coz); //espera ser acordado
+    javalis = JAVALIS; //repoe os javalis
+    sem_post(&java); //libera os gauleses
+
+    return javalis;
 }
 
-int RetiraJavali(){
-    if(counter > 0){
-        counter--;
-        return 1;
+int RetiraJavali(unsigned long int i){
+    unsigned long int tid = (long)i;
+    sem_wait(&mutex);
+
+    if(javalis==0){
+        sem_post(&coz); //acorda o cozinheiro
+        printf("Gaules %c(%ld) acordou o cozinheiro\n", Nome[tid], tid);
+        sem_wait(&java);
     }
-    else if(counter=0){
-        return 0;
-    }
+    javalis--;
+
+    sem_post(&mutex);
+    return (javalis+1);
 }
 
 void* Gaules(void* i){
     unsigned long int tid = (long)i;
     while(1){
-        sem_wait(&full);
+        qtd = RetiraJavali(tid);
         sem_wait(&mutex);
-
-        if(RetiraJavali()){
-            printf("Gaules %c(%ld) comendo\n", Nome[tid], tid);
-        }
-        else{
-            printf("Gaules %c(%ld) acordou o cozinheiro\n", Nome[tid], tid);
-        }
-
+        printf("Gaules %c(%ld) comendo\tJAVALIS RESTANTES = %d\n", Nome[tid], tid, qtd-1);
         sem_post(&mutex);
-        sem_post(&empty);
-        sleep(2);
     } 
 }
 
 void* Cozinheiro(void* i){
     unsigned long int tid = (long)i;
     while(1){
-        sem_wait(&empty);
-        sem_wait(&mutex);
-
-        if(ColocaJavalis()){
-            printf("Cozinheiro(%ld) colocou javali na mesa\n",tid);
-        }
-
-        sem_post(&mutex);
-        sem_post(&full);
+        ColocaJavalis();
+        printf("Cozinheiro(%ld) colocou javali na mesa\tJAVALIS NA MESA = %d\n",tid,javalis);
     }
 }
 
-int main(void){
-    int mainSleepTime = 5;
+void main(void){
     int N_GAULESES = strlen(Nome);
     int i;
+    int main_time=TIME;
 
     pthread_t gaules[N_GAULESES];
     pthread_t cozinheiro[N_COZINHEIROS];
 
     sem_init(&mutex, 0, 1);
-    sem_init(&full, 0, 0);
-    sem_init(&empty, 0, JAVALIS);
+    sem_init(&java, 0, 0);
+    sem_init(&coz, 0, 0);
     
-    for (i=0;i<N_COZINHEIROS;i++)
-    {
-        pthread_create(&cozinheiro[i], NULL, Cozinheiro, NULL);
+    for(i=0;i<N_COZINHEIROS;i++){
+        pthread_create(&cozinheiro[i], NULL, Cozinheiro, (void*)(intptr_t)i);
     }
     for(i=0;i<N_GAULESES;i++){
         pthread_create(&gaules[i], NULL, Gaules, (void*)(intptr_t)i);
     }
 
-    sleep(mainSleepTime);
-    printf("\nExiting the program...\n");
-    return 0;
+    sleep(main_time);
 }
