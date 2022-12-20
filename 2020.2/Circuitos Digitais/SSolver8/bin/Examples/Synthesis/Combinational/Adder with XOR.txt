@@ -1,0 +1,16 @@
+
+-- Full Adder with XOR parts
+--sum = A*/B*/C + /A*B*/C + /A*/B*C + A*B*C;
+
+PARTS xor
+
+OPTIONS
+
+IN_OUT_SIGNALS
+X    0101 0101 ;
+Y    0011 0011 ;
+Cin  0000 1111 ;
+Sum  0110 1001 ;
+
+
+END_OF_SPEC

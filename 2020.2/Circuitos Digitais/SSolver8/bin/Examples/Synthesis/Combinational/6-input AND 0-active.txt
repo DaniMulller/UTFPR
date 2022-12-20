@@ -1,0 +1,19 @@
+'
+' 6-input AND with 0-active inputs
+
+OPTIONS    solution_first
+
+PARTS
+
+IN_OUT_SIGNALS
+
+/a  1xxxxx 0 ;
+/b  x1xxxx 0 ;
+/c  xx1xxx 0 ;
+/d  xxx1xx 0 ;
+/e  xxxx1x 0 ;
+/f  xxxxx1 0 ;
+
+out 000000 1 ;
+
+END_of_SPEC

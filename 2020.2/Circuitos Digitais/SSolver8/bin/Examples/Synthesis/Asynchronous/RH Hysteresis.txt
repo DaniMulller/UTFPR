@@ -1,0 +1,19 @@
+
+' ===========================================
+' Relative Humidity Alarm hysteresis (47%-51%)
+' ===========================================
+' Note: BEQ minimizes Boolean Eqns of solutions (1), (2) and (3) to the same result: "RH_Alarm =  RH>50 || !RH<48 &&  RH_Alarm;"
+
+PARTS  and or    ' Note: no dff's, gate latches will be allowed
+
+OPTIONS  solution_simple
+
+IN_OUT_SIGNALS
+
+' RH      47 48 50 51 50 48 47      51
+RH<48     ===_______________========xx;  ' starting states initialize, last states give RH>50 priority over RH<48
+RH>50     _________===______________==;
+
+RH_Alarm  _________=========________==;  ' output
+
+END_of_SPEC

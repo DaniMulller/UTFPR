@@ -1,0 +1,9 @@
+' 20 variable limit
+  ' minimize: 0.25 secs
+  ' inv & minimize: 27 secs
+
+
+Y=A*B*C*D*E*
+  F*G*H*I*J* 
+  K*L*M*N*O*
+  P*Q*R*S*T;

@@ -1,0 +1,21 @@
+enable
+
+config terminal
+enable secret utfpr2039834 
+
+line con 0
+password redes2039834 
+login
+exit
+
+line vty 0 4
+transport input telnet 
+password redes2039834 
+login
+exit
+
+service password-encryption 
+banner motd #Acesso restrito aos alunos da Disciplina Redes de Computadores - 2021/2!                       Administrador: Daniel Muller#
+exit
+
+copy run start

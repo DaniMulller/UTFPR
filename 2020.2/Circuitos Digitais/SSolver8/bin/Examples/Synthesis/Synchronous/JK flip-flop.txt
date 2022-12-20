@@ -1,0 +1,20 @@
+
+-- JK flip-flop from D flip-flop
+
+-- (5) part dff=1 and=2 or=1 inv=1/2 solution or
+-- (5) part dff=1 nand=4 solution. Both reduce to "J*/Q + /K*Q" form.
+-- use dff_cp to ensure that d does NOT have 'H'/'L' & clr/pre have 'H'
+
+PARTS    dff=0-1 'nand
+
+OPTIONS   'no_and_or_option  ' saves (1) inv
+  ff_2in_sync  out_synch  solution_first
+
+IN_OUT_SIGNALS
+
+ J      ____==______________==__==______====;
+ K      ____________==______==__==______====;
+ CK:clk __==__==__==__==__==__==__==__==__==;
+ Q      ______========________====________==;
+
+END_of_SPEC

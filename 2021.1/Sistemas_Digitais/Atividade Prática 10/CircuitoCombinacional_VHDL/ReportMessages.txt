@@ -1,0 +1,33 @@
+(Info) ************************************************************************
+(Info) Deeds VHDL converter (ver. 2.40.330) is running...
+(Info) Convertion started (14:27:23, 14/08/2021) on file:
+(Info) --> "C:\Users\Pichau\Desktop\Tudo\UTFPR\2021.2\Sistemas Digitais\Atividade Prática 10\CircuitoCombinacional.pbs"
+(Info) ------------------------------------------------------------------------
+(Info) Converting schematic file "CircuitoCombinacional.pbs" into VHDL
+(Info) --> Top level VHDL file: "CircuitoCombinacional.vhd"
+(Info) Extracting and Coding VHDL components
+(Info) VHDL components coded (file: "Components.vhd", 2314 bytes)
+(Info) Processing Input and Output Signals
+(Warning) Input "A" [Id#14] renamed to "iA"
+(Warning) Input "B" [Id#15] renamed to "iB"
+(Warning) Input "C" [Id#16] renamed to "iC"
+(Warning) Input "D" [Id#17] renamed to "iD"
+(Warning) Output "S1" [Id#1] renamed to "oS1"
+(Warning) Output "S2" [Id#59] renamed to "oS2"
+(Warning) Output "S3" [Id#121] renamed to "oS3"
+(Warning) Output "S4" [Id#123] renamed to "oS4"
+(Info) 4 Native Input(s), 4 Native Output(s) processed.
+(Info) 0 Added Input(s), 0 Added Output(s), 0 Default Output(s).
+(Info) Top level structural VHDL description coded (file "CircuitoCombinacional.vhd", 3267 bytes)
+(Info) ------------------------------------------------------------------------
+(Info) Saving all the VHDL files in the subfolder:
+(Info) --> "C:\Users\Pichau\Desktop\Tudo\UTFPR\2021.2\Sistemas Digitais\Atividade Prática 10\CircuitoCombinacional_VHDL"
+(Info)   |--- "Components.vhd" file saved.
+(Info)   |--- "CircuitoCombinacional.vhd" file saved.
+(Info) ------------------------------------------------------------------------
+(Info) ------------------------------------------------------------------------
+(Info) This message list saved on file:
+(Info) --> "C:\Users\Pichau\Desktop\Tudo\UTFPR\2021.2\Sistemas Digitais\Atividade Prática 10\CircuitoCombinacional_VHDL\ReportMessages.txt"
+(Info) ------------------------------------------------------------------------
+(Info) All files saved! VHDL conversion ended (14:27:23, 14/08/2021)
+(Info) ************************************************************************

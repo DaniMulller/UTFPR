@@ -1,0 +1,4 @@
+				Quick Money
+
+	O aplicativo tem o obejtivo de facilitar a movimentação de capital do usuário. Dentro dele é possível fazer desde uma simples tranferência para outras contas bancárias, com o auxílio do novo PIX, até comprar e vender títulos públicos e imobiliários, fundos e ações. Tudo isso dentro de um mesmo aplicativo, incentivando que mais pessoas consigam investir seu dinheiro com facilidade e agilidade.
+	A rentabilidade do aplicativo vem pela forma de pequenas taxas entre as operações que não envolvem o PIX e por meio de juros no caso de empréstimo de capital. Caso o usuário deseje, o aplicativo oferece o "Plano EasyTrading", com um pagamento de R$50 ao mês, é disponibilizado uma plataforma completa para realizar as operações com ainda mais agilidade e a visualização do gráfico de cotações em tempo real.

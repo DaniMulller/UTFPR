@@ -1,0 +1,16 @@
+
+-- CVT pulse doubler circuit
+-- assumes that input (speed) is synchronous
+
+OPTIONS  ff_2in_synch  out_synch  out_ded  solution_first
+
+PARTS dff=0-2  'xor
+
+IN_OUT_SIGNALS
+
+clk:clk     _=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_;
+speed:data  __========________====_________;
+output      ___rrrr____==______==__rrrr____;
+
+
+END_of_SPEC

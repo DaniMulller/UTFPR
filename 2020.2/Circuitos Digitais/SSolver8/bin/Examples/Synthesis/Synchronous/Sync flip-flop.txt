@@ -1,0 +1,18 @@
+
+--  Synchronizing FF
+
+OPTIONS
+  --no_ff_init
+  ff_2in_sync  out_synchronous  solution_first
+
+PARTS  dff
+
+
+IN_OUT_SIGNALS
+ CK:clk       __==__==__==__==__==__==__==__==__==;
+ Async-fn     _____xx=============================;
+ Sync-fn      ______xxxx==========================;
+ -- Sync-fn    ______////==========================;
+
+
+END_of_SPEC

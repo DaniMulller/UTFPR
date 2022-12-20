@@ -1,0 +1,19 @@
+
+-- AND-OR flip-flop
+
+--   f= set          -- set
+--    + f * /reset   -- latch / reset
+
+OPTIONS
+
+PARTS and or inv   ' no dff parts
+
+IN_OUT_SIGNALS
+
+set  __=______;
+res  _____=___;
+out  xx===____;   -- note: MUST remember x's !!
+
+
+
+END_of_SPEC

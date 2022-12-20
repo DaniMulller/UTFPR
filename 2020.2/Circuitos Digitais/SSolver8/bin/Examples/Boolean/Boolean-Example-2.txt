@@ -1,0 +1,7 @@
+
+FS_SAFE =
+FU_SAFE &&
+((!(KTACT_ENERGIZATION) && (RC_FU_IGN_INIT_INSTLD)) ||
+( ! ( LSU_TEST ) &&
+! ( PREPARE_LSU )  &&
+     ! ( CHARGE_LSU ) ));

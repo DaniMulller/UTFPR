@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1570112002 source:/home/jefferson/Downloads/Grafo/main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"GrafoMA.h"
+	"GrafoLA.h"
+
+1570111400 source:/home/jefferson/Downloads/Grafo/GrafoMA.c
+	<stdio.h>
+	<stdlib.h>
+	"GrafoMA.h"
+
+1569593429 /home/jefferson/Downloads/Grafo/GrafoMA.h
+
+1570111934 source:/home/jefferson/Downloads/Grafo/lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
+1569591920 /home/jefferson/Downloads/Grafo/lista.h
+
+1570111910 source:/home/jefferson/Downloads/Grafo/GrafoLA.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"GrafoLA.h"
+
+1569593446 /home/jefferson/Downloads/Grafo/GrafoLA.h
+

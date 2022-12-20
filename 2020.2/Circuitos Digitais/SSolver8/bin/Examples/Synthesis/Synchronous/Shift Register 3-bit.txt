@@ -1,0 +1,17 @@
+
+-- Shift Register - a 3-bit delay line
+
+OPTIONS  solution_Simple 
+         no_ff_init
+
+PARTS    dff=0-3
+
+IN_OUT_SIGNALS
+ Ck    0101010101010101;
+ D     0000111100111111;
+ 'ff1  x000011110011111;
+ 'ff2  xxx0000111100111;
+ Q     xxxxx00001111001;
+
+
+END_of_SPEC

@@ -1,0 +1,41 @@
+enable
+config terminal
+
+hostname r-co-dm
+
+interface fa0/0
+ip address 200.200.34.97 255.255.255.224
+ipv6 address 2001:db8:acad:2202::1/64
+ipv6 address FE80::1 link-local
+description filial 2
+exit
+
+interface fa0/1
+ip address 200.200.34.242 255.255.255.252
+ipv6 address 2001:db8:acad:22ff::4:2/112
+description co-ita
+exit
+
+interface serial 0/3/0
+clock rate 56000
+exit
+
+ip route 200.200.34.0 255.255.255.192 200.200.34.241
+ip route 200.200.34.64 255.255.255.224 200.200.34.241
+ip route 200.200.34.224 255.255.255.252 200.200.34.241
+ip route 200.200.34.228 255.255.255.252 200.200.34.241
+ip route 200.200.34.232 255.255.255.252 200.200.34.241
+ip route 200.200.34.236 255.255.255.252 200.200.34.241
+
+ipv6 route 2001:db8:acad:2200::/64 2001:db8:acad:22ff::4:1
+ipv6 route 2001:db8:acad:2201::/64 2001:db8:acad:22ff::4:1
+ipv6 route 2001:db8:acad:22ff::/112 2001:db8:acad:22ff::4:1
+ipv6 route 2001:db8:acad:22ff::1:0/112 2001:db8:acad:22ff::4:1
+ipv6 route 2001:db8:acad:22ff::2:0/112 2001:db8:acad:22ff::4:1
+ipv6 route 2001:db8:acad:22ff::3:0/112 2001:db8:acad:22ff::4:1
+
+ipv6 unicast-routing
+
+exit
+
+write

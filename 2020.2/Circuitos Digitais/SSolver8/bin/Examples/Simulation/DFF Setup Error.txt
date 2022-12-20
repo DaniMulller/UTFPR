@@ -1,0 +1,16 @@
+
+' dff setup-time test
+' data changes just before clock : setup error (HW_mode only)
+
+PARTs     inv dff  output
+
+NETLIST   2   1,3    4   
+
+OPTIONS
+
+IN_OUT_SIGNALS
+ data    __==__==;  'd input
+ /clock  __====__;  ' inv input, inv drives clock
+ C       xxxxxx==;  'output
+
+END_OF_SPEC

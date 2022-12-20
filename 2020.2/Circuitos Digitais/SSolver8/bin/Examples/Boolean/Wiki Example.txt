@@ -1,0 +1,8 @@
+' Quine-McCluskey algorithm test case - from Wikipedia
+
+' Terse equation format:
+' - must be on one line, have one-letter names (a-z A-Z) & end with "."
+' - below equation is reformatted by BEQ before processing to:
+'   f(A,B,C,D) = /A*B*/C*/D + A*/B*/C*/D + A*/B*C*/D + A*/B*C*D + A*B*/C*/D + A*B*C*D;
+
+f(A,B,C,D) = A'BC'D' + AB'C'D' + AB'CD' + AB'CD + ABC'D' + ABCD.  -- Terse equation example

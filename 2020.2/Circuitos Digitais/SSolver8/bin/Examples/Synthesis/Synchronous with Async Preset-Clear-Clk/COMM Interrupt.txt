@@ -1,0 +1,22 @@
+
+-- COMM module interrupt  circuit - DECA/TDS A3 module
+
+--  This circuit has concurrent pre/clr pulses, a good test of dff_cp simulation.
+
+PARTS  dff_cp=0-1
+
+
+OPTIONS  no_ff_init  solution_first
+
+IN_OUT_SIGNALS
+
+write*      =_=_==_==========_=_=;
+Data:data   x1x1xx0xxxxxxxxxx0x0x;
+event       _________=__=________;
+OUT         x11111000111111110000;
+
+ --Data   11111000xxxxxxxx000xx; -- with overlapping data setup/hold, no output glitches
+ --OUT    xx1x11x0011111111x000;
+
+
+END_OF_SPEC

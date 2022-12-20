@@ -1,0 +1,17 @@
+
+-- RS latch using NOR gates
+
+OPTIONS  solution_simple
+
+PARTS  nor
+
+
+IN_OUT_SIGNALS
+
+ R  =____= ;      --   reset
+ S  ___=__ ;      --   set
+
+ Q  ___==_ ;      -- s-r test case
+
+
+END_of_SPEC

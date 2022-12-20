@@ -1,0 +1,17 @@
+' Bartee Figure 4-21 - a "difficult" map
+
+
+   f =  x *            z      '(a)  Syn gets minimal answer.  and3 or3 is fastest
+    +  /x *      /y * /z
+    +   w * /x * /y
+    +  /w *  x * /y ;
+
+   f =  x *            z      '(b)
+    +  /x *      /y * /z
+    +  /w *  x * /y
+    +   w *      /y * z ;
+
+  f =  x *            z       '(c)
+   +  /w *      /y * /z
+    +   w * /x * /y;
+

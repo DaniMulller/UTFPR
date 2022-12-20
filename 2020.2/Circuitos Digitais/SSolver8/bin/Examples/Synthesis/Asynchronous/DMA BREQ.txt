@@ -1,0 +1,15 @@
+
+-- DMA Bus Request circuit
+
+PARTS and or
+
+OPTIONS  no_output_glit
+
+IN_OUT_SIGNALS
+
+BREQ     _==============__=============____ ;
+BACK     ___==================____=======__ ;
+CBREQ    _==============______=========____ ;
+
+
+END_of_SPEC

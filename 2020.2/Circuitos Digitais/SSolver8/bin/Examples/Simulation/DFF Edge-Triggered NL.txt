@@ -1,0 +1,14 @@
+'
+'  + edge_triggered D flip-flop
+
+OPTIONS  no_glit no_output_glit
+
+PARTS     nand=6
+NETLIST   1,4  1,7  2,3  3,8  4,5  4,6  8
+
+IN_OUT_SIGNALS
+   CP  _=__==__=__==__=;
+   D   __=__=_==_==_=__;    ' provides setup & hold > 0ns
+   Q   x_______=======_;
+
+END_of_SPEC

@@ -1,0 +1,39 @@
+|Example_PulseGeneratorP4P1
+iP1 => Fsm1_Example_PulseGeneratorP4P1:C040.i_P1
+iCK => Fsm1_Example_PulseGeneratorP4P1:C040.Ck
+inReset => Fsm1_Example_PulseGeneratorP4P1:C040.Reset
+iP2 => Fsm1_Example_PulseGeneratorP4P1:C040.i_P2
+iP3 => Fsm1_Example_PulseGeneratorP4P1:C040.i_P3
+iP4 => Fsm1_Example_PulseGeneratorP4P1:C040.i_P4
+oLIGHT << Fsm1_Example_PulseGeneratorP4P1:C040.o_LIT
+oPULSE << Fsm1_Example_PulseGeneratorP4P1:C040.o_PLS
+
+
+|Example_PulseGeneratorP4P1|Fsm1_Example_PulseGeneratorP4P1:C040
+Ck => State~1.DATAIN
+Reset => State~3.DATAIN
+i_P1 => Next_State.OUTPUTSELECT
+i_P1 => Next_State.OUTPUTSELECT
+i_P1 => Next_State.OUTPUTSELECT
+i_P1 => Next_State.OUTPUTSELECT
+i_P1 => Next_State.state_b.DATAB
+i_P1 => Selector3.IN2
+i_P2 => Next_State.OUTPUTSELECT
+i_P2 => Next_State.OUTPUTSELECT
+i_P2 => Next_State.OUTPUTSELECT
+i_P2 => Next_State.DATAA
+i_P2 => Selector1.IN3
+i_P2 => Selector5.IN2
+i_P3 => Next_State.OUTPUTSELECT
+i_P3 => Next_State.OUTPUTSELECT
+i_P3 => Next_State.DATAA
+i_P3 => Selector4.IN3
+i_P3 => Selector6.IN2
+i_P4 => Next_State.DATAA
+i_P4 => Selector2.IN3
+i_P4 => Next_State.DATAA
+i_P4 => Next_State.state_h.DATAB
+o_LIT <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+o_PLS <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+
+

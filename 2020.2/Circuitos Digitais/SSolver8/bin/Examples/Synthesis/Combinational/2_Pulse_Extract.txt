@@ -1,0 +1,12 @@
+
+OPTIONS  No_AND_OR_Order  NO_OUTPUT_GLIT   solution_first
+
+PARTS  'xor
+
+IN_OUT_SIGNALS
+ In1        ____==__========________;
+ In2        ________========__==____;
+ In3        _____============_______;
+ Out        ____==ff_________///____;
+
+END_of_SPEC

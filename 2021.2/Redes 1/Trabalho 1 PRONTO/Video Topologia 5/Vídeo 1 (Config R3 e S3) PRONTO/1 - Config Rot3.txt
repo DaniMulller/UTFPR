@@ -1,0 +1,31 @@
+enable
+
+config terminal
+hostname R3
+
+interface fa0/0
+ip address 192.168.2.2 255.255.255.252
+ipv6 address 2001:db8:acad:ff02::2/64
+no shutdown
+exit
+
+interface fa0/1
+ip address 192.168.3.1 255.255.255.252
+ipv6 address 2001:db8:acad:ff03::1/64
+no shutdown
+exit
+
+interface fa1/0
+ip address 10.1.2.254 255.255.255.0
+ipv6 address 2001:db8:acad:2::254/64
+ipv6 address FE80:2::254 link-local
+no shutdown
+exit
+
+ip route 172.29.0.0 255.255.0.0 192.168.3.2
+ip route 10.1.1.0 255.255.255.0 192.168.2.1
+ipv6 route 2001:db8:acad::/64 2001:db8:acad:ff03::2
+ipv6 route 2001:db8:acad:1::/64 2001:db8:acad:ff02::1
+ipv6 unicast-routing
+
+exit

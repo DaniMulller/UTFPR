@@ -1,0 +1,20 @@
+
+-- Carry Synchronous  (full adder carry)
+' more efficient result (and=2 vs and=3) with no_and_or_order
+
+OPTIONS
+  solution_first
+  ff_all_sync
+  out_sync
+
+PARTS and or dff=0-1
+
+IN_OUT_SIGNALS
+A        0011001100110011000;
+B        0000111100001111000;
+C        0000000011111111110;
+ck:clk   _=_=_=_=_=_=_=_=_=_;
+car_sync 0000000110011111100;
+
+
+END_OF_SPEC

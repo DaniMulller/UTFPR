@@ -1,0 +1,48 @@
+PC2
+ping 200.200.34.4
+ping 2001:db8:acad:2200::4
+
+Sw Matriz
+ping 200.200.34.2
+
+Rot PB
+ping 200.200.34.1
+ping 2001:db8:acad:2200::1
+
+Rot VIT
+ping 200.200.34.226
+ping 2001:db8:acad:22ff::2
+
+Rot FB
+ping 200.200.34.230
+ping 2001:db8:acad:22ff::1:2
+
+Sw Filial 1
+ping 200.200.34.66
+
+PC3
+ping 200.200.34.67
+ping 2001:db8:acad:2201::3
+
+PC4
+ping 200.200.34.68
+ping 2001:db8:acad:2201::4
+
+Rot ITA
+ping 200.200.34.234
+ping 2001:db8:acad:22ff::2:2
+
+Rot CO
+ping 200.200.34.242
+ping 2001:db8:acad:22ff::4:2
+
+Sw Filial 2
+ping 200.200.34.98
+
+PC5
+ping 200.200.34.99
+ping 2001:db8:acad:2202::3
+
+PC6
+ping 200.200.34.100
+ping 2001:db8:acad:2202::4

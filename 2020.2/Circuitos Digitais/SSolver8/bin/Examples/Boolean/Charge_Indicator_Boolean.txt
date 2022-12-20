@@ -1,0 +1,9 @@
+CHARGE_INDICATOR_AMBER =
+  ( LSU_TEST &&  FU_SAFE &&
+      ! ( PREPARE_LSU ) &&
+      ! ( CHARGE_LSU ) ) ||
+      (  CHARGE_LSU &&
+      PREPARE_LSU  &&
+      LSU_LED_PWR )  ||
+      ( CIRCUIT_CONTINUITY_TEST &&
+      FU_SAFE );

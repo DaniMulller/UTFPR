@@ -1,0 +1,12 @@
+
+-- Divide by 2
+
+OPTIONS
+ -- solution_first
+
+PARTS dff
+
+IN_OUT_SIGNALS
+--            1   2   3   4
+CLK:clk     __==__==__==__;
+1/2         __====____====;

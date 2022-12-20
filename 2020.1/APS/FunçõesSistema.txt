@@ -1,0 +1,10 @@
+1 - Cadastro do Usuário/ Gerar Senha de Confirmação
+2 - Escolha do Estilo de Investidor (Seguro, Intermediário, Dinâmico)
+3 - Depósito do Dinheiro
+4 - Cálculo das Ações, Fundos e da Taxa
+5 - Confirmação do Usuário com Senha
+6 - Compra das Ações
+7 - Venda das Ações
+8 - Adicionar o dinheiro ao caixa
+9 - Feedback do Usuário com a Operação
+10 - Retirada do Dinheiro

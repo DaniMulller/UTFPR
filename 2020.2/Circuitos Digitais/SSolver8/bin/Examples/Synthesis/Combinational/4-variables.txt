@@ -1,0 +1,23 @@
+
+-- 4-variables
+-- D = Da * Db + /PNa * Db + /PNb * Da;
+
+
+OPTIONS    solution_first  no_and_or_order
+
+PARTS  or  and  -- get simpler solution if NO_AND_OR_Order
+
+
+IN_OUT_SIGNALS
+
+   PNa   0000 0000 1111 1111;    -- Part List # a
+   PNb   0000 1111 0000 1111;    -- Part List # b
+   Da    0011 0011 0011 0011;    -- Data List a
+   Db    0101 0101 0101 0101;    -- Data List b
+   D     xxxx 0101 0011 0001;    -- Data Merge (0=/Data_pin_in_path, 1=Data_pin_in_path)
+
+ -- Key #1 is 'xxxx', i.e. don't cares (Note: BEQ can't currently do this.)
+ -- Key #2 is SYN ability to re-arrange and/or/inv order !
+
+
+END_of_SPEC

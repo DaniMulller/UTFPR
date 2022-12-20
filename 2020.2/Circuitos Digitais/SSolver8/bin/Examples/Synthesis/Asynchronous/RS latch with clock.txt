@@ -1,0 +1,17 @@
+
+-- RS latch with clock
+--  clocked RS flip-flop, see Mano p.206
+
+OPTIONS  solution_simple
+
+PARTS nand
+
+
+IN_OUT_SIGNALS
+R   ==_________=== ;
+S   _____===______ ;
+CP  _=_=__=__=__=_ ;
+Q   x_____======__ ;
+
+
+END_of_SPEC

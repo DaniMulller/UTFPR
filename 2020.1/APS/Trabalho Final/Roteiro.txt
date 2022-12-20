@@ -1,0 +1,23 @@
+Fase de Concepçãoe:
+
+1. Definir o objetivo geral para o sistema;								V
+2. Elaborar escopo para o sistema;									V
+3. Considerando sua aplicabilidade na fase de levantamento de requisitos e análise: elaborar		V
+os diagramas de atividades considerados necessários;
+4. Identificar e classificar os requisitos (funcionais e não funcionais);				V
+5. Organizar os requisitos em casos de uso;								V
+6. Elaborar o modelo de casos de uso;									V
+7. Expandir os principais casos de uso para o sistema (pelo menos dois para trabalho			V
+individual e quatro para trabalho em duplas);
+8. Elaborar o modelo conceitual para o sistema seguido de um relatório (em forma de			V
+tópicos) justificando cada relacionamento entre classes;
+
+
+Fase de Elaboração:
+
+9. Elaborar os diagramas de sequência necessários (para todos os casos de uso expandidos);		V	
+10. Elaboração do diagrama de classes de projeto para o sistema;					V
+
+OBS.: Todos os elementos solicitados acima deverão estar consistentes entre si, sempre
+considerando a sua aplicabilidade no processo de análise e projeto de sistemas (ex.
+diagramas de atividades devem ser aplicados para identificar requisitos para o sistema).

@@ -1,0 +1,25 @@
+LAN: rede local, doméstica de pouco alcance
+WAN: rede de maior distância que conecta as LAN's
+
+
+Internet: rede que interconecta várias redes globais
+Intranet: rede LAN e WAN privada e segura utilizada em empresas
+Extranet: conexão segura aos dados da empresa por funcionários externos ou fornecedores
+
+
+Tolerância a falhas: caso haja problema em um dispositivo a rede utiliza outros caminhos para a transmissão gerando menor ruído possível
+Escalabilidade: Utilização de regras semelhantes entre os dispositivos para aumentar a quantidade de dispositivos sem afetar os outros
+Qualidade do Serviço (QoS): quando há muita demanda da rede, seleciona os serviços essenciais para direcionar a maior parte dos dados
+Segurança da Rede: acesso pode requisitar login e senha
+
+
+Traga seu próprio dispositivo: tendência atual onde os funcionários da empresa podem acessar os dados de seus próprios dispositivos
+Colaboração on-line/vídeo: meios para se comunicar através da internet
+Computação em Nuvem: grandes centros de armazenamentos são usados/locados para armazenar dados de diversas pessoas/empresas/programas
+Técnologia em Casa: exemplo, elétrodomésticos controlados via celular (forno,geladeira..)
+Rede Powerline: método de conexão de internet via cabos de energia utilizando a frequência
+Banda Larga sem Fio: recomendada para lugares distantes em que não é possível levar um cabo de rede
+
+
+Segurança: existem muitos jeitos de se quebrar a segurança de dados, por isso, empresas, provedores e clientes devem sempre estar protegidos
+(VPN, Firewall, Antivírus, Sistema de Prevenção de Intrusões)

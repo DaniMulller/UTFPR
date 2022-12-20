@@ -1,0 +1,29 @@
+01/03/2021   
+INPUT-EQN/TT MINIMIZE TRUTH-TABLE SORT  
+
+(1) F = w*x + x*!y + y*z + x*!z;
+
+    w  x  y  z   F
+    0  0  0  0   0
+    0  0  0  1   0
+    0  0  1  0   0
+    0  0  1  1   1
+    0  1  0  0   1
+    0  1  0  1   1
+    0  1  1  0   1
+    0  1  1  1   1
+    1  0  0  0   0
+    1  0  0  1   0
+    1  0  1  0   0
+    1  0  1  1   1
+    1  1  0  0   1
+    1  1  0  1   1
+    1  1  1  0   1
+    1  1  1  1   1;
+
+        F =     y and     z
+         or     x;
+
+
+ (1) Boolean equation processed
+  Processing time = 0,08 seconds

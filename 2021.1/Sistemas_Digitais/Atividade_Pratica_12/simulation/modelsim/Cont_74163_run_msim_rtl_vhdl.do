@@ -1,0 +1,17 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/Pichau/Desktop/Tudo/UTFPR/2021.2/Sistemas_Digitais/Atividade_Pratica_12/Cont_74163.vhd}
+
+vcom -93 -work work {C:/Users/Pichau/Desktop/Tudo/UTFPR/2021.2/Sistemas_Digitais/Atividade_Pratica_12/Cont_74163_full_tb.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_74_163
+
+add wave *
+view structure
+view signals
+run 1700 ns

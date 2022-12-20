@@ -1,0 +1,23 @@
+Comunicações são regidas por Protocolos
+Mensagens são codificadas para a transmissão e depois decodificadas pelo receptor
+Unicast: mensagem para um único dispositivo
+Multicast: mensagem para mais de um dispositivo
+Broadcast: mensagem para todos os dispositivos
+
+Uma mensagem passa por vários protocolos. 
+Protocolos Ethernet: IP, TCP e HTTP
+Protocolos de Segurança: SSH, SSL e TLS
+Protocolos de roteamento: OSPF e BGP
+Protocolos de Serviços: DHCP e DNS
+
+Organizações sem fins lucrativos criam padrões para a Internet, TCP/IP e Eletrônicos/Comunicação
+
+Modelo OSI tem 7 camadas
+Modelo TCP/IP tem 4 camadas (Aplicação, Transporte, Rede e Internet)
+
+No encapslulamento:
+Segmentação: pedaços menores, mais rapidez
+
+Rede: Endereço lógico IP
+Enlace de Dados: Endereço físico MAC
+Em redes diferentes, o quadro de enlace recebido é de um getway padrão ou roteador

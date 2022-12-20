@@ -1,0 +1,136 @@
+' Output Options: select all Options, Operator Format:1
+
+' 5/27/07 Updated this file after eliminating - ~ _L _N as Not operators
+' -----  10One.D  -----
+f(10_var) = a*b*c*d*e*f*g*h*i*j;
+
+
+' Bartee Figure 4-21 - a "difficult" map
+'  BEQ does NOT get minimal answer unless have Sort option
+
+   f =  x *            z      '(a)
+    +  /x *      /y * /z
+    +   w * /x * /y
+    +  /w *  x * /y ;
+
+   f =  x *            z      '(b)
+    +  /x *      /y * /z
+    +  /w *  x * /y
+    +   w *      /y * z ;
+
+  f =  x *            z       '(c)
+   +  /w *      /y * /z
+    +   w * /x * /y;
+
+
+'--------  Boolean-Example-1.txt  ----------------
+X = A + A*B;
+Y = C*B*A*D*E*F +
+    G + A*(H + I);
+Function_3 := Bxy_4  xor ABC;        ' Exclusive OR
+
+
+
+'--------  Boolean-Example-2.txt  ----------------
+' LSU-FU Test case
+'  had to change {[ to (, add ;
+' Result: Much more readable !!
+
+FIRING_SYSTEM_SAFE =
+FIRING_UNIT_SAFE &&
+((!(KTACT_ENERGIZATION) && (RC_FU_IGN_INIT_INSTLD)) ||
+( ! ( LSU_TEST ) &&
+! ( PREPARE_LSU )  &&
+     ! ( CHARGE_LSU ) ));
+
+
+'--------  Boolean-Example-3.txt  ----------------
+Run = (PERM_Option_Show And ((Number_of_Perms_LT_E25 And
+         No_Perms_Const_LT_100K))) Or
+                                    Perm_Test_Mode_is_1;
+
+'--------  Boolean-Example-4.txt  ----------------
+f = Not bq_DISPLAY_ONLY_LAST Or
+            (Not bq_MINIMIZE_EQUATION And Not bq_INVERT_EQUATION
+             And Not bq_TRUTH_TABLE_OUTPUT And Not bq_FORM_TEMPLATE);
+
+
+
+/f=a;  -f=a;  ' check that "/" or "-" are not considered comments
+
+ '----------  T1.D  -------------
+ !!f(a)   =  not /!/ nOt /a;  ' verify that operators in a comment are ignored / ! * & && + # | || $ ^ ;
+
+!/(F(a))   = A + !A;                  ' comments go here
+
+' A2     f(abc):=  /B*/a* c + /a* B* c;
+f(abc) :=   /B*'comment inserted here 'also here
+/a* c'and here'
++'and here'
+/a* B *c;  ' and at end
+
+
+f(abc) =  /a*/b* c + /a* b* c +a
+*/b*/c +  a*/b* c +  a* b* c  +  a* b*/c;
+
+f(abc) =  /a*/b*/c  +  /a*/b* c  +  /a* b* c   +  /a* b AnD /c oR
+           a*/b*/c  +   a*/b* c  +   a* b* c   +   a* b*/c;
+
+f:= /w*/x*/y*/z  +  /w*/x*/y*/z  +  /w*/x*/y*/z  +  /w*/x*/y*/z  +
+    /w*/x*/y*/z  +  /w*/x*/y*/z  +  /w*/x*/y*/z  +  /w*/x*/y*/z;
+
+f:= /w*/x*/y*/z  +  /w*/x*/y* z  +  /w*/x* y*/z  +   w*/x*/y*/z  +
+     w*/x* y*/z  +   w*/x* y* z  +   w* x* y*/z  +   w* x* y* z;
+
+' 1/15/92 note - after reversing symbol order, below expression is NOT minimized
+f:= /w*/x*/y* z  +  /w* x*/y*/z  +  /w* x* y*/z  +  /w* x* y* z  +
+     w*/x*/y*/z  +   w*/x*/y* z  +   w*/x* y*/z  +   w*/x* y* z  +   w* x* y* z;
+
+
+f(b)   =  c xOr d;
+
+' Blakeslee p.50
+  f := a * (b+c);       '  5.
+  f := (a+b) * (a+c);   '  6.
+  f := a * /a;          '  8.
+  f := not(a+b);        ' 14.
+  f := not(a*b);        ' 15.
+
+F = (a*b) or (c*d) + (e*f);   f = a nand b;   f = c(123:456) nor d(0);
+
+' 3/01/10 eliminated _L _N in LLD boolean
+ LLD =   siz1 * siz0
+     +   siz1 *  siz0 *  a00
+   ' +  /siz0 *  a01  ' This extra term may be generated if not minimized
+     +   siz1 *  a01
+     +   a00 * a01;
+
+' Q-M and espresso produce different (but equivalent) minimizations for /DS_EN
+DS_EN :=  (NOT PROM(3) AND NOT PROM(2))
+    OR (NOT PROM(3)            AND BES)
+    OR (    PROM(3) AND NOT PROM(1) AND BES)
+    OR (    PROM(3) AND PROM(1) AND     A(18) AND     A(17) AND     A(16))
+    OR (    PROM(3) AND PROM(1) AND NOT A(18) AND NOT A(17) AND NOT A(16))
+    OR (    PROM(3) AND PROM(1) AND BES AND NOT A(18))
+    OR (    PROM(3) AND PROM(1) AND BES AND A(18) AND NOT A(17) AND NOT A(16))
+    OR (    PROM(3) AND PROM(1) AND CNT(1) AND A(18) AND NOT A(17) AND A(16));
+
+
+
+'--------  X3-29.D  -------------
+f =/a */b */c +
+   /a * b * d +
+    a * b */c +
+    a */b * (d)  ;
+
+
+' Example of Terse equation format:
+' - must be on one line, have one-letter names (a-z A-Z) & end with "."
+' - example equation is reformatted to:
+'   f(A,B,C,D) = /A*B*/C*/D + A*/B*/C*/D + A*/B*C*/D + A*/B*C*D + A*B*/C*/D + A*B*C*D;
+
+f(A,B,C,D) = A'BC'D' + AB'C'D' + AB'CD' + AB'CD + ABC'D' + ABCD.  -- optional comment
+
+out = x01 + x02 + x03 + x04 + x05 + x06 + x07 + x08 + x09 + x10 + x11;  ' 5-18-10
+
+Q = ((D nand ENA) nand (Q nand (ENA nand (D nand ENA))));

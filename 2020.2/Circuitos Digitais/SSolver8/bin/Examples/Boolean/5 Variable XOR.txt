@@ -1,0 +1,1 @@
+X = A xor B xor C xor D xor E;

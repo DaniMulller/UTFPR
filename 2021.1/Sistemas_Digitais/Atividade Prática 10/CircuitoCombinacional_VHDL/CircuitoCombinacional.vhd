@@ -1,0 +1,110 @@
+------------------------------------------------------------
+-- Deeds (Digital Electronics Education and Design Suite)
+-- VHDL Code generated on (14/08/2021, 14:27:23)
+--      by Deeds (Digital Circuit Simulator)(Deeds-DcS)
+--      Ver. 2.40.330 (Jan 07, 2021)
+-- Copyright (c) 2002-2020 University of Genoa, Italy
+--      Web Site:  https://www.digitalelectronicsdeeds.com
+------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.all;
+
+
+ENTITY CircCombinacional IS
+  PORT( 
+    --------------------------------------> Inputs:
+    iA:           IN  std_logic;
+    iB:           IN  std_logic;
+    iC:           IN  std_logic;
+    iD:           IN  std_logic;
+    --------------------------------------> Outputs:
+    oS1:          OUT std_logic;
+    oS2:          OUT std_logic;
+    oS3:          OUT std_logic;
+    oS4:          OUT std_logic 
+    ------------------------------------------------------
+    );
+END CircCombinacional;
+
+
+ARCHITECTURE structural OF CircCombinacional IS 
+
+  ----------------------------------------> Components:
+  COMPONENT NOT_gate IS
+    PORT( I: IN std_logic;
+          O: OUT std_logic );
+  END COMPONENT;
+  --
+  COMPONENT AND2_gate IS
+    PORT( I0,I1: IN std_logic;
+          O: OUT std_logic );
+  END COMPONENT;
+  --
+  COMPONENT OR2_gate IS
+    PORT( I0,I1: IN std_logic;
+          O: OUT std_logic );
+  END COMPONENT;
+  --
+  COMPONENT OR3_gate IS
+    PORT( I0,I1,I2: IN std_logic;
+          O: OUT std_logic );
+  END COMPONENT;
+  --
+  COMPONENT NOR2_gate IS
+    PORT( I0,I1: IN std_logic;
+          O: OUT std_logic );
+  END COMPONENT;
+
+  ----------------------------------------> Signals:
+  SIGNAL S001: std_logic;
+  SIGNAL S002: std_logic;
+  SIGNAL S003: std_logic;
+  SIGNAL S004: std_logic;
+  SIGNAL S005: std_logic;
+  SIGNAL S006: std_logic;
+  SIGNAL S007: std_logic;
+  SIGNAL S008: std_logic;
+  SIGNAL S009: std_logic;
+  SIGNAL S010: std_logic;
+  SIGNAL S011: std_logic;
+  SIGNAL S012: std_logic;
+  SIGNAL S013: std_logic;
+  SIGNAL S014: std_logic;
+  SIGNAL S015: std_logic;
+  SIGNAL S016: std_logic;
+  SIGNAL S017: std_logic;
+  SIGNAL S018: std_logic;
+
+
+BEGIN -- structural
+
+  ----------------------------------------> Input:
+  S017 <= iA;
+  S018 <= iB;
+  S013 <= iC;
+  S011 <= iD;
+
+  ----------------------------------------> Output:
+  oS1 <= S002;
+  oS2 <= S005;
+  oS3 <= S009;
+  oS4 <= S010;
+
+  ----------------------------------------> Component Mapping:
+  C006: NOT_gate PORT MAP ( S018, S001 );
+  C023: OR2_gate PORT MAP ( S017, S001, S002 );
+  C024: OR3_gate PORT MAP ( S004, S017, S011, S005 );
+  C036: NOT_gate PORT MAP ( S018, S003 );
+  C049: AND2_gate PORT MAP ( S003, S013, S004 );
+  C090: AND2_gate PORT MAP ( S007, S008, S009 );
+  C091: OR2_gate PORT MAP ( S017, S006, S007 );
+  C092: OR2_gate PORT MAP ( S013, S011, S008 );
+  C093: NOT_gate PORT MAP ( S018, S006 );
+  C122: AND2_gate PORT MAP ( S016, S014, S010 );
+  C125: AND2_gate PORT MAP ( S017, S011, S012 );
+  C137: NOR2_gate PORT MAP ( S013, S012, S014 );
+  C146: OR2_gate PORT MAP ( S017, S015, S016 );
+  C147: NOT_gate PORT MAP ( S018, S015 );
+END structural;

@@ -1,0 +1,19 @@
+
+' Decode Instruction Register
+' f=/15*/14*13 + /15*14*/13 + /15*14*13 + 15*/14*/13 + 15*/14*13 + 15*14*/13;
+
+
+OPTIONS  solution_first
+
+PARTS  nand nand3
+
+IN_OUT_SIGNALS
+
+IR15     0000 1111;
+IR14     0011 0011;
+IR13     0101 0101;
+
+LD_SINK  0111 1110;
+
+
+END_of_SPEC

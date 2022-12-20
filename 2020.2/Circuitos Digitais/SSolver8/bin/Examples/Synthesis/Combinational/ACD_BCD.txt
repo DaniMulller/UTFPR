@@ -1,0 +1,16 @@
+'
+-- ACD_BCD
+-- OUT = A*C*D + B*C*D;
+
+PARTS and or
+
+OPTIONS  solution_first
+
+IN_OUT_SIGNALS
+  A    0000 0000 1111 1111;
+  B    0101 0101 0101 0101;
+  C    0000 1111 0000 1111;
+  D    0011 0011 0011 0011;
+  OUT  0000 0001 0000 0011;
+
+END_of_SPEC

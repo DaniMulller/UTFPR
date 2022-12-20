@@ -1,0 +1,19 @@
+
+-- 5-input AND with 0-active inputs
+
+OPTIONS
+  solution_first
+
+PARTS
+
+IN_OUT_SIGNALS
+
+/a  1xxxx 0 ;
+/b  x1xxx 0 ;
+/c  xx1xx 0 ;
+/d  xxx1x 0 ;
+/e  xxxx1 0 ;
+
+out 00000 1 ;
+
+END_of_SPEC

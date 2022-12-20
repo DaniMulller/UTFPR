@@ -1,0 +1,12 @@
+void gerar_vetor(int v[],int tam,int limite);
+void bubble_sort(int v[],int n);
+void insertion_sort(int v[],int n);
+void selection_sort(int v[],int n);
+void merge_sort(int v[],int p,int r);
+void merge(int v[],int p,int q,int r);
+void quick_sort(int v[],int p,int u);
+int separa(int v[],int primeiro,int ultimo);
+int troca(int *a,int *b);
+void imprime(int v[],int n);
+void reseta_vetor(int v[],int v2[],int n);
+void inverte_vetor(int v[],int v2[],int n);

@@ -1,0 +1,40 @@
+PC1
+ping 172.29.30.3 
+ping 2001:db8:acad::20:2
+
+S1
+ping 172.29.1.253
+
+R1
+ping 172.29.1.10
+ping 2001:db8:acad::1:10
+
+R2
+ping 10.1.1.254
+ping 2001:db8:acad:1::254
+
+S2
+ping 10.1.1.253
+
+PC2
+ping 10.1.1.1
+ping 2001:db8:acad:1::1
+
+PC3
+ping 10.1.1.2
+ping 2001:db8:acad:1::2
+
+R3
+ping 10.1.2.254
+ping 2001:db8:acad:2::254
+
+S3
+ping 10.1.2.253
+
+PC4
+ping 10.1.2.1
+ping 2001:db8:acad:2::1
+
+PC5 
+ping 10.1.2.2
+ping 2001:db8:acad:2::2

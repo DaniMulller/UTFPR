@@ -1,0 +1,3 @@
+Run = (PERM_Option_Show And ((Number_of_Perms_LT_E25 And 
+             No_Perms_Const_LT_100K))) Or 
+                                          Perm_Test_Mode_is_1; 

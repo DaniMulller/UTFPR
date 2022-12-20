@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/Pichau/Desktop/Tudo/UTFPR/2021.2/SistemasDigitais/Atividade_Pratica_11/Example_PulseGeneratorP4P1_VHDL/Example_PulseGeneratorP4P1.vhd}
+vcom -93 -work work {C:/Users/Pichau/Desktop/Tudo/UTFPR/2021.2/SistemasDigitais/Atividade_Pratica_11/Example_PulseGeneratorP4P1_VHDL/Fsm1_Example_PulseGeneratorP4P1.vhd}
+

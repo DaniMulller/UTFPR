@@ -1,0 +1,2 @@
+' 10 variables
+f[10_var] = b*c*d*e*f*g*h*i*j*a;

@@ -1,0 +1,13 @@
+
+OPTIONS  NO_OUTPUT_GLIT
+
+PARTS - inv  and=2     or=2      output
+NETLIST - 5  1,2  4,8  1,2  5,7    6
+
+IN_OUT_SIGNALS
+ In1        ____==__========________;
+ In2        ________========__==____;
+ In3        _____============_______;
+ Out        ____==ff_________///____;
+
+END_of_SPEC

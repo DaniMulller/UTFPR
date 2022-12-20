@@ -1,0 +1,11 @@
+Para usar o modelo de BJT:
+- os arquivos BJT_NPN_ideal.asc e BJT_NPN_ideal.asy (e/ou BJT_PNP_ideal.asc e BJT_PNP_ideal.asy) devem estar no mesmo diretório do arquivo de simulação;
+
+Para inserir um transistor na simulação: 
+- clicar em "component" (botão com desenho de porta lógica);
+- alterar o "top directory" (bem em cima) para o que está a sua simulação;
+- escolher o componente BJT_NPN_ideal (ou BJT_PNP_ideal) e clicar em OK
+
+Para alterar o valor de beta ou VBE ou VCEsat (por padrão, NPN: VBE=0.7 beta=100 VCEsat=0.15; PNP: VBE=-0.7 beta=100 VCEsat=-0.15):
+- clicar com o botão direito sobre o componente;
+- habilitar "PARAMS" e escrever os valores desejados. Ex: VBE=0.7 beta=150 (para NPN: VBE > 0 VCEsat >= 0; para PNP: VBE < 0 VCEsat <= 0)

@@ -1,0 +1,19 @@
+
+-- full adder
+-- sum = A*/B*/C + /A*B*/C + /A*/B*C + A*B*C;
+
+OPTIONS  'no_glitches
+ 
+PARTS     inv=3    and=8                                    or=3
+NETLIST   1  2  3  1,2  1,5  4,2  4,5  3,7  3,10  6,8  6,9  11,12  13,14  15,16  17
+
+
+IN_OUT_SIGNALS
+ X    0101 0101 ;
+ Y    0011 0011 ;
+ Cin  0000 1111 ;
+
+ Sum  0110 1001 ;
+
+
+END_OF_SPEC

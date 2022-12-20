@@ -1,0 +1,17 @@
+
+-- RS latch using NAND gates
+
+OPTIONS  solution_simple
+
+PARTS  nand
+
+
+IN_OUT_SIGNALS
+ck:clk      _=_=_= ;      -- ensure that :clk is deleted if no dff parts
+-S          _====_ ;      --  -set
+-R          ===_== ;      --  -reset
+
+Q           ===__= ;      -- output
+
+
+END_of_SPEC

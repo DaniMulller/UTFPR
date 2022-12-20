@@ -1,0 +1,35 @@
+
+-- Noise Filter Sync
+--  0-level noise filter
+
+OPTIONS
+  NO_ff_init  -- validate that self-clear, also that SYN initializes ff's to 'x'
+  --ff_all_sync -- omit so can verify effect of solo "out_sync"
+  solution_first  out_sync
+
+-- since start @ 0-parts, verify that :clk signal will be tried as output.
+PARTs dff_c
+
+-- key to spec'ing OUT is that have 2-tic delay async & 3-tic delay sync
+--  this is REAL tough to know in advance...
+-- Also, must spec all states 0->0, 0->1, 1->1, 1->0 & 0-level noise (all states)
+-- may be other soln's that can have equal delay ??
+
+
+IN_out_SIGNALS
+ CK:clk       __==__==__==__==__==__==__==__==__==__==__==__==__==__==__==__;
+
+ -- 1/2 noise states covered is adequate
+ --  (1,2 [1st noise position followed by 2nd]; 1,3; 1,4; 2,3...
+ SIGNAL:data  _________==========__==__=_=_=__=_==__=_=_=__=________________;
+ --ff states 0.0  0.1  1.1 1.0
+ --  noise states              12  1.3 1..4 23  2.4 2..1
+
+ -- Can add (1) clock cycle of x's at leading & trailing edge to
+ --  cover uncertainty of possible solutions.
+ 
+    OUT       xxxxxx________xxxx========xxxx________________________________;
+ -- CK:clk   __==__==__==__==__==__==__==__==__==__==__==__==__==__==__==__;
+
+
+eND_of_SPEc

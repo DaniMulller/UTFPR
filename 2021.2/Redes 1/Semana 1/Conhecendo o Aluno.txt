@@ -1,0 +1,27 @@
+Nome:
+Curso:
+Exerce alguma atividade remunerada ou voluntária (estágio, emprego, Iniciação Científica (IC), Extensão)?
+Nome da Empresa/Local onde exerce a atividade: 
+Função/Atividades que exerce:
+Se for IC ou Extensão, quem é professor orientador?
+Possui alguma experiência com Redes de Computadores?
+Possui alguma expectativa especial com a disciplina?
+Você possui computador ou notebook?
+Possui webcam funcionando no equipamento?
+Qual sistema operacional que utiliza como maior frequencia?
+Já usou o GNU/Linux? Se sim, qual distribuição já usou?
+Possui celular? (se sim, é Android ou iOS)?
+
+Daniel Augusto Muller
+Eng de Computação
+Acabei de iniciar uma IC, por enquanto não remunerada
+NULL
+NULL
+Fábio Bertotti
+Não
+Gosto dessa área e gostaria de aprender
+Sim, computador
+Não tenho Webcam
+Windows
+Já usei Ubuntu, mas não me adaptei pela falta de compatibilidade com alguns programas
+Sim, Android

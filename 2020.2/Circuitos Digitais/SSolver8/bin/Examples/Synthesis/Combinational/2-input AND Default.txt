@@ -1,0 +1,10 @@
+'
+' 2-input AND with default Parts & Options
+
+PARTS
+OPTIONS
+
+IN_OUT_SIGNALS
+  A  0101;  'input #1
+  B  0011;  'input #2
+  C  0001;  'output

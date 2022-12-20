@@ -1,0 +1,29 @@
+
+'   ==================================
+'         Switch debounce latch
+'        using NAND & NOR gates
+'   ==================================
+
+' grounded (Logic 0) wiper will travel from NC to NO, bounce at end of travel
+' NC & NO contacts will have pullup Resistors to +5VDC
+
+
+OPTIONS
+  Solution_First
+  ' Solution_All
+
+PARTS
+  nand
+  nor
+
+IN_OUT_SIGNALS
+
+
+'             closed   opening                        open                           closing   closed
+Switch_NC     _______=_==__=___======================================================_=__==_=___________;    ' Normally Closed contact:
+
+'                      open                  closing      closed   opening           open
+Switch_NO     ===============================_==___==_=____________=_==__=_=============================;    ' Normally Open contact
+
+Debounced_NC  _______________________________========================================___________________;     ' Circuit Output
+

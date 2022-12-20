@@ -1,0 +1,22 @@
+
+-- One-Shot pushbutton
+-- simple one-shot, e.g. to synchronize a pushbutton
+--
+-- may well want to add a metastable option
+   -- :data (or :async) type signal
+   --    causes dff to go to 'x' for 1st state after clock.
+
+OPTIONS  ff_all_sync    'solution_first
+  
+
+PARTS  dff=0-3  -- this gives classical shift-register solution !
+
+
+IN_OUT_SIGNALS
+
+clock   :clk  __==__==__==__==__==__==__==__==__==__==__==__==__==__==__==__;
+push_but:data _________==______x===__________=================_____=________;
+Meta_wait     ______________====____________________====________________====;
+
+
+end_of_spec

@@ -1,0 +1,15 @@
+
+' Common Ambiguity test
+' - The race condition causes an output glitch (Hardware mode only)
+
+OPTIONS  NO_GLITches
+
+NETLIST  1   1,2    3
+PARTS   inv  and  output
+
+IN_OUT_SIGNALS
+input   ___===__;
+Output  ________;
+
+
+END_of_SPEC

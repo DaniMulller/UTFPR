@@ -1,0 +1,103 @@
+|CircCombinacional
+iA => OR2_gate:C023.I0
+iA => OR3_gate:C024.I1
+iA => OR2_gate:C091.I0
+iA => AND2_gate:C125.I0
+iA => OR2_gate:C146.I0
+iB => NOT_gate:C006.I
+iB => NOT_gate:C036.I
+iB => NOT_gate:C093.I
+iB => NOT_gate:C147.I
+iC => AND2_gate:C049.I1
+iC => OR2_gate:C092.I0
+iC => NOR2_gate:C137.I0
+iD => OR3_gate:C024.I2
+iD => OR2_gate:C092.I1
+iD => AND2_gate:C125.I1
+oS1 <= OR2_gate:C023.O
+oS2 <= OR3_gate:C024.O
+oS3 <= AND2_gate:C090.O
+oS4 <= AND2_gate:C122.O
+
+
+|CircCombinacional|NOT_gate:C006
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|OR2_gate:C023
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|OR3_gate:C024
+I0 => O.IN0
+I1 => O.IN1
+I2 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|NOT_gate:C036
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|AND2_gate:C049
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|AND2_gate:C090
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|OR2_gate:C091
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|OR2_gate:C092
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|NOT_gate:C093
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|AND2_gate:C122
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|AND2_gate:C125
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|NOR2_gate:C137
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|OR2_gate:C146
+I0 => O.IN0
+I1 => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircCombinacional|NOT_gate:C147
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+

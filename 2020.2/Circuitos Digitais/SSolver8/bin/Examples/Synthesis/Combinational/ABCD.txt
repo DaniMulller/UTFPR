@@ -1,0 +1,24 @@
+
+-- (4) variables: ABCD
+
+-- attempt to reduce booleans in
+--  function Signal_type_vs_Input_pin_Mismatch
+
+PARTS
+
+OPTIONS    solution_first
+
+-- f= /a*/b* c*/d + /a* b*/c* d + a*/b* c*/d + a* b*/c*/d + a* b*/c* d;
+-- Need at MOST 10 parts            - (4)inv, (5)and4, (1)or5
+-- This equation reduces to 7 parts - (3)inv, (3)and3, (1)or3
+--
+
+IN_OUT_SIGNALS
+ff_sync     0000 0000 1111 1111;
+in_clk      0000 1111 0000 1111;
+src_clk     0011 0011 0011 0011;
+src_data    0101 0101 0101 0101;
+return      0010 0100 0010 1100;
+
+
+END_of_SPEC

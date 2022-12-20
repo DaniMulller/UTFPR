@@ -1,0 +1,16 @@
+
+-- AND-XOR circuit
+
+
+PARTS  and xor inv=0
+
+OPTIONS
+
+
+IN_OUT_SIGNALS
+A 0101;
+B 0011;
+C 0100;
+
+
+END_OF_SPEC

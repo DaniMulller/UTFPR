@@ -1,0 +1,15 @@
+'
+' Bartee-a (from Boolean Example BARTEE.txt)
+
+PARTS
+
+OPTIONS   solution_first
+
+IN_OUT_SIGNALS
+  w  0101 0101 0101 0101;
+  x  0000 0000 1111 1111;
+  y  0011 0011 0011 0011;
+  z  0000 1111 0000 1111;
+  f  1100 0100 1000 1111;
+
+END_of_SPEC

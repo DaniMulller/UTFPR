@@ -1,0 +1,16 @@
+
+-- Address Strobe Sync
+
+OPTIONS  solution_first out_synchronous  out_dedicated
+
+PARTS nand dff=0-2 inv
+
+IN_OUT_SIGNALS
+--  s0-s7    -   0   2   4   w   w   6   0   2
+12MHz:clk  __==__==__==__==__==__==__==__==__==__==__==__==__==;
+AS         ____________================________________________;
+~rqst68    xx============________________======================;
+
+
+
+end_of_SPEC

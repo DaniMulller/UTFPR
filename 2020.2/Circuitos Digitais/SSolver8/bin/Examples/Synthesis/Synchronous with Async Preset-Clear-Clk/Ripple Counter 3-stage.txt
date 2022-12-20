@@ -1,0 +1,15 @@
+
+-- 3-stage Ripple Counter
+
+OPTIONS  'solution_first
+
+PARTS  dff inv   and=0
+
+
+IN_OUT_SIGNALS
+CLK:clk  =_==__==__==__==__==__==__==__==__;
+    --    q1 __====____====____====____====____;
+    --q2 ______========________========____;
+q3       ______________================____;
+
+END_of_SPEC

@@ -1,0 +1,13 @@
+
+' 5-variable AND function
+' - only 5 rows (vs 32) needed using don't cares
+
+ E D C B A   AND5
+ x x x x 0    0
+ x x x 0 x    0
+ x x 0 x x    0
+ x 0 x x x    0
+ 0 x x x x    0
+ 1 1 1 1 1    1;
+
+

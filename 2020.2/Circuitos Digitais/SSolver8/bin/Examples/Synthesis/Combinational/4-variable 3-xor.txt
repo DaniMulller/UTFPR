@@ -1,0 +1,13 @@
+PARTS 'xor 
+     'default and-or -> solution with 13 parts
+
+OPTIONS Solution_first
+
+IN_OUT_SIGNALS
+  A  0000 0000 1111 1111;
+  B  0000 1111 0000 1111;
+  C  0011 0011 0011 0011;
+  D  0101 0101 0101 0101;
+  X  0110 1001 1001 0110;
+
+END_of_SPEC

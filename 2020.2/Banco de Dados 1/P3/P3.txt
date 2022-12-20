@@ -1,0 +1,90 @@
+1)
+Left-Join: Aparece NULL em Protocolo
+
+select S.id_source as ID_Fonte, S.Source_name as Fonte, P.desc_protocol as Protocolo, P.format as Formato
+from Source S left join Protocol P on S.id_protocol = P.id_protocol
+order by 2
+
+Produto Cartesiano: Não aparece NULL (equivalente ao Inner Join)
+
+select S.id_source as ID_Fonte, S.Source_name as Fonte, P.desc_protocol as Protocolo, P.format as Formato
+from Source S, Protocol P
+where S.id_protocol = P.id_protocol
+order by 2
+
+-----------------------------------------------------------------------------------------------------------
+
+2)
+
+select avg(M.Measured_data) as Media, P.desc_point as Desc_Ponto, T.desc_type as Tipo
+from Measure M, Point P, Typepoint T
+where M.id_point=P.id_point and P.id_type=T.id_type
+and P.id_point=4
+and extract(DAY from M.Time_collect) between 2 and 5
+and extract(Month from M.Time_collect)=3
+group by Desc_Ponto,Tipo
+having avg(M.Measured_data)>20
+
+union
+
+select avg(M.Measured_data) as Media, P.desc_point as Desc_Ponto, T.desc_type as Tipo
+from Measure M, Point P, Typepoint T
+where M.id_point=P.id_point and P.id_type=T.id_type
+and P.id_point=8
+and extract(DAY from M.Time_collect) between 2 and 5
+and extract(Month from M.Time_collect)=3
+group by Desc_Ponto,Tipo
+having avg(M.Measured_data)>20
+
+union
+
+select avg(M.Measured_data) as Media, P.desc_point as Desc_Ponto, T.desc_type as Tipo
+from Measure M, Point P, Typepoint T
+where M.id_point=P.id_point and P.id_type=T.id_type
+and P.id_point=9
+and extract(DAY from M.Time_collect) between 2 and 5
+and extract(Month from M.Time_collect)=3
+group by Desc_Ponto,Tipo
+having avg(M.Measured_data)>20
+
+-------------------------------------------------------------------------------------------------------------
+
+3)
+
+select 'Dados de: '||P.desc_point as FONTE, avg(M.measured_data) as Media,
+max(M.measured_data) as Maior, min(M.measured_data) as Menor, count(M.measured_data) as Qtd
+from Measure M, Point P
+where M.id_point=P.id_point
+and P.id_source=1
+and P.id_point=4
+group by Fonte
+
+--------------------------------------------------------------------------------------------------------------
+
+4)
+
+select P.desc_protocol as Nome, count(S.id_protocol) as QTD
+from Protocol P left join Source S on S.id_protocol=P.id_protocol
+group by Nome
+order by 2 DESC
+
+---------------------------------------------------------------------------------------------------------------
+
+5)
+
+select P.id_point as ID, P.desc_point as Ponto, count(P.id_point) as QTD,
+avg(M.measured_data) as Media, 'Hist' as Descricao
+from Point P left join Measure M on M.id_point=P.id_point
+group by ID,Ponto
+
+union all
+
+select P.id_point as ID, P.desc_point as Ponto, count(P.id_point) as QTD,
+avg(M.measured_data) as Media, 'Dia3' as Descricao
+from Point P left join Measure M on M.id_point=P.id_point
+where extract(DAY from M.time_collect)=3
+group by ID,Ponto
+
+order by 2 DESC, 3 DESC, 5 DESC
+
+

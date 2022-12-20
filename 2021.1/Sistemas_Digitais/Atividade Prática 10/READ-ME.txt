@@ -1,0 +1,2 @@
+Professor, não sei que erro está dando no meu ModelSim, mas a pasta Work aparece como vazia todas as vezes
+que eu tentei Simular o circuito, então não consegui fazer a Wave que o senhor pediu

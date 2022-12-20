@@ -1,0 +1,16 @@
+'
+'  ============================
+'  + edge_triggered D flip-flop, see Mano p.214
+'  ============================
+
+OPTIONS  solution_first
+
+PARTS  nand
+
+IN_OUT_SIGNALS
+   D   __=__=_==_==_=__;  -- provides setup & hold > 0ns
+   CP  _=__==__=__==__=;
+   Q   x_______=======_;
+
+
+END_of_SPEC

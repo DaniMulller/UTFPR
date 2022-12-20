@@ -1,0 +1,16 @@
+
+-- RS latch with dff_cp or nand gates
+
+OPTIONS  GATE_LATch_allwd  Solution_equiv
+
+PARTS  dff_cp  nand
+
+
+IN_OUT_SIGNALS
+-S  _====_ ;      -- 0-active set
+-R  ===_== ;      -- 0-active reset
+
+ Q  ===__= ;      -- output
+
+
+END_of_SPEC

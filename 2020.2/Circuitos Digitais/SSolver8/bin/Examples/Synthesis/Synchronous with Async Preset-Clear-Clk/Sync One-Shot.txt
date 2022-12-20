@@ -1,0 +1,21 @@
+
+-- Synchronizing One-Shot w/o Initialization
+
+OPTIONS
+   FF_2in_sync
+   out_sync
+   NO_FF_INItialize
+
+
+PARTS
+   dff_c
+   --dff=1 dff_c=1
+   --and=0 or=0
+
+IN_OUT_SIGNALS
+ck:clk _=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=;
+signal =======_==========___________===========;
+out    xxxxx====__========__===================;    -- 0 active
+ --out    xxxxx____==________==___________________;    -- 1 active
+
+

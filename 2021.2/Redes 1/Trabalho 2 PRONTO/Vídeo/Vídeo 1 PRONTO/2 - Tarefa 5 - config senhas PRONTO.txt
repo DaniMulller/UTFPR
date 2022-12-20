@@ -1,0 +1,41 @@
+enable
+config terminal
+
+security passwords min-length 10 
+
+login block-for 180 attempts 3 within 60
+
+enable secret @dmin-daniel
+
+line con 0
+exec-timeout 5
+password @cons-daniel
+login
+exit
+
+line vty 0 15
+exec-timeout 5
+exit
+
+banner motd #--------------------------------------------------------------------------
+| 										
+| Roteador Coronel Vivida		    	    			
+| 							    			
+| ATENCAO Acesso Restrito a pessoas autorizadas!		    			
+| 							    		
+| Administrador: Daniel Augusto Muller (danielmuller@alunos.utfpr.edu.br) 
+| 							    			
+-------------------------------------------------------------------------- #
+
+ip domain name daniel.muller.com.br
+crypto key generate rsa general-keys modulus 1024
+username daniel secret ssh@Network1ng
+
+line vty 0 4
+login local
+transport input ssh
+exit
+
+service password-encryption 
+
+end

@@ -1,0 +1,15 @@
+
+-- Transparent Latch
+
+OPTIONS   NO_OUTPUT_GLITch   Solution_simple
+
+PARTS  nand
+
+
+IN_OUT_SIGNALS
+ D    ___===___===___===__;
+ ENA  =======______===____;
+ Q    ___===_________=====;
+
+
+END_of_SPEC

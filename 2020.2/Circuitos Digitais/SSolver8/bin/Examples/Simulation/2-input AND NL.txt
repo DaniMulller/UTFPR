@@ -1,0 +1,9 @@
+' 2-input AND
+
+PARTS      and   output
+NETLIST    1,2      3
+
+IN_OUT_SIGNALS
+  A  0101;   ' input #1
+  B  0011;   ' input #2
+  C  0001;   ' output
